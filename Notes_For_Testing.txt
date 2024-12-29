@@ -1,0 +1,34 @@
+Environment Setup:
+
+Logged into the Ubuntu VM for the Learning Machines project.
+Navigated to ~/learning_machines_robobo/examples/full_project_setup/ directory.
+
+CoppeliaSim Installation:
+Downloaded CoppeliaSim_Edu_V4_8_0_rev0_Ubuntu22_04.tar.xz locally and uploaded it to the VM.
+Extracted the archive into ~/learning_machines_robobo/examples/full_project_setup/CoppeliaSim/.
+
+File Structure Organization:
+Created uploaded_files directory for organizing uploaded resources.
+Moved CoppeliaSim files into the correct directory structure.
+
+Permissions Setup:
+Applied chmod +x to coppeliaSim.sh and Robobo_Scene.ttt to ensure they are executable.
+
+Script Updates:
+Edited start_coppelia_sim.sh:
+Added absolute paths to coppeliaSim.sh and Robobo_Scene.ttt.
+Debugged incorrect syntax and parameters in the script.
+
+Local IP Address Configuration:
+Identified local IP using ifconfig.
+Updated setup.bash to include ROS_MASTER_URI and COPPELIA_SIM_IP.
+
+Current Task:
+Debugging start_coppelia_sim.sh errors (Permission denied, No such file or directory).
+Ensuring CoppeliaSim launches with the Robobo_Scene.ttt scene.
+
+
+Commands to start woth Ubuntu:
+certificationsforrahil@learning-machines-vm:~$ echo $DISPLAY
+
+certificationsforrahil@learning-machines-vm:~$ export DISPLAY=:1
