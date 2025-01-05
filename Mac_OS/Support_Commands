@@ -1,0 +1,113 @@
+Setting Up the Environment
+Create a virtual environment:
+
+bash
+Copy code
+python3 -m venv .venv
+Creates a virtual environment named .venv in the current directory.
+
+Activate the virtual environment:
+
+bash
+Copy code
+source .venv/bin/activate
+Activates the virtual environment for installing dependencies and running scripts.
+
+Install required Python packages:
+
+bash
+Copy code
+python3 -m pip install -r requirements.txt
+Installs the Python dependencies listed in the requirements.txt file.
+
+File and Directory Operations
+List files in a directory:
+
+bash
+Copy code
+ls
+Lists all files and directories in the current directory.
+
+List detailed information of a file:
+
+bash
+Copy code
+ls -l ./path/to/file
+Shows detailed information (like permissions and size) of a specified file.
+
+Move a file or directory:
+
+bash
+Copy code
+mv /source/path /destination/path
+Moves a file or directory to a new location.
+
+Change file permissions:
+
+bash
+Copy code
+chmod +x ./path/to/file
+Makes a file executable.
+
+Search for files with a specific name:
+
+bash
+Copy code
+find /base/path -name "filename"
+Searches for a file named filename starting from the specified base path.
+
+Running Scripts
+Run a shell script:
+
+bash
+Copy code
+zsh ./path/to/script.zsh ./path/to/scene.ttt
+Runs the specified .zsh script and passes a .ttt scene file as an argument.
+
+Handle permission errors for a scene:
+
+bash
+Copy code
+chmod +r ./path/to/scene.ttt
+Gives read permissions to a .ttt file required by the CoppeliaSim script.
+
+Python Script Execution
+Run a Python script:
+bash
+Copy code
+python send_commands.py
+Runs the Python script send_commands.py to communicate with the CoppeliaSim server.
+CoppeliaSim Setup
+Verify a file path in the app structure:
+
+bash
+Copy code
+ls ./coppeliaSim.app/Contents/MacOS/coppeliaSim
+Verifies the existence of the main executable in the CoppeliaSim application package.
+
+Start the simulation via a script:
+
+bash
+Copy code
+zsh ./scripts/start_coppelia_sim.zsh ./scenes/Robobo_Scene.ttt
+Launches the CoppeliaSim application with the specified scene file.
+
+General Navigation
+Navigate to a directory:
+
+bash
+Copy code
+cd /path/to/directory
+Moves to the specified directory.
+
+View the current directory:
+
+bash
+Copy code
+pwd
+Prints the current working directory.
+
+Summary of Key Fixes
+CoppeliaSim Setup: Ensured the coppeliaSim.app was placed in the correct directory (full_project_setup) and adjusted file permissions for coppeliaSim and Robobo_Scene.ttt.
+Virtual Environment: Created a Python venv and installed all required dependencies.
+Communication Test: Verified Python-ZeroMQ communication with the send_commands.py script.
